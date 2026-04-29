@@ -4,6 +4,7 @@ const { chromium } = require('playwright');
 // ⬇️ Import all sub-scripts (exported as functions)..
 const DIVIDER = '────────────────────────────────────────────────────────────────────────────────';
 const runBurnEnergy = require('./burn-energy.js');
+const runFashionMagazine = require('./fashion-magazine.js');
 const runTeleportEvent = require('./tele.js');
 const runMapsEvent = require('./maps.js');
 const runSlotsEvent = require('./Slots.js');
@@ -17,6 +18,7 @@ const runBridesmaids = require('./bridesmaids.js');
 
 const scripts = [
   { name: 'Burn Energy', fn: runBurnEnergy, alwaysRun: true },
+  { name: 'Fashion Magazine', fn: runFashionMagazine, envKey: 'LP_FASHION_MAGAZINE_URL' },
   { name: 'Tele Event', fn: runTeleportEvent, envKey: 'LP_TELEPORT_URL' },
   { name: 'Maps Event', fn: runMapsEvent, envKey: 'LP_MAPS_URL' },
   { name: 'Slots Event', fn: runSlotsEvent, envKey: 'LP_SLOTS_URL' },
