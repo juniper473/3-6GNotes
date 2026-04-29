@@ -39,6 +39,9 @@ module.exports = async function runFashionMagazine(page) {
 
       console.log("🟢 Price is emeralds. Allowed to click ONE square.");
 
+      // ⏸️ 5-minute safety delay
+      await page.waitForTimeout(5 * 60 * 1000);
+
       // STEP 2: Read the grid
       await page.waitForSelector('.zone-grid .square', { timeout: 30000 });
 
